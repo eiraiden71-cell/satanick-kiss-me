@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Важно: мы используем os.environ.get(...), чтобы получить значение из настроек Railway
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 # Уточните точный URL API в документации DeepSeek! Этот примерный.
-DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
+DEEPSEEK_API_URL = "https://api.deepseek.com"
 
 @app.route('/v1/chat/completions', methods=['POST'])
 def proxy_to_deepseek():
